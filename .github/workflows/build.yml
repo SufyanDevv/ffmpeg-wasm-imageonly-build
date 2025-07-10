@@ -1,0 +1,21 @@
+name: Build FFmpeg WASM Image-only
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run build script
+        run: bash ./scripts/build.imageonly.sh
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ffmpeg-wasm-imageonly
+          path: dist/
