@@ -8,6 +8,8 @@ docker run --rm -v $(pwd):/build -w /build emscripten/emsdk bash -c "
     --target-os=none \
     --arch=x86_32 \
     --disable-x86asm \
+    --disable-inline-asm \
+    --disable-asm \
     --disable-everything \
     --enable-demuxer=png,jpeg,bmp,gif,webp \
     --enable-muxer=png,jpeg,bmp,gif,webp \
