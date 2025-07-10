@@ -14,6 +14,7 @@ docker run --rm -v $(pwd):/build -w /build emscripten/emsdk bash -c "
     --disable-ffplay \
     --disable-ffprobe \
     --disable-ffmpeg \
+    --disable-doc \
     --enable-demuxer=png,jpeg,bmp,gif,webp \
     --enable-muxer=png,jpeg,bmp,gif,webp \
     --enable-decoder=png,jpeg,bmp,gif,webp \
